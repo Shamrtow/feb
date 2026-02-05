@@ -2,8 +2,8 @@ import { useState } from "react";
 
 export default function HappyHearts() {
     const getRandomOffset = () => {
-  const x = (Math.random() - 0.5) * 100; // от -50px до +50px
-  const y = -Math.random() * 100;         // вверх до -100px
+  const x = (Math.random() - 0.5) * 100; 
+  const y = -Math.random() * 100;         
   return { x, y };
 };
 
@@ -16,7 +16,6 @@ export default function HappyHearts() {
     };
     setHearts(prev => [...prev, newHeart]);
     
-    // удалить сердце через 1 сек
     setTimeout(() => {
       setHearts(prev => prev.filter(h => h.id !== newHeart.id));
     }, 1000);
